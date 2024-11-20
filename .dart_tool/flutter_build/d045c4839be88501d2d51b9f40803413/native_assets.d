@@ -1,0 +1,1 @@
+ D:\\be_talent\\be_talent\\.dart_tool\\flutter_build\\d045c4839be88501d2d51b9f40803413\\native_assets.yaml: 
