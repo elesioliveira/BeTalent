@@ -9,22 +9,26 @@ class AppHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        AppGaps.appGapH16,
-        Text('Foto', style: heading2(fontSize: 18)),
-        AppGaps.appGapH16,
-        Text('Nome', style: heading2(fontSize: 18)),
-        const Expanded(child: SizedBox()),
-        CircleAvatar(
-          backgroundColor: AppColors.black,
-          radius: 6,
-        ),
-        AppGaps.appGapH32,
-      ],
+    return Container(
+      padding: const EdgeInsets.only(top: 16),
+      color: AppColors.gray05,
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          AppGaps.appGapH16,
+          Text('Foto', style: heading2(fontSize: 18)),
+          AppGaps.appGapH16,
+          Text('Nome', style: heading2(fontSize: 18)),
+          const Expanded(child: SizedBox()),
+          CircleAvatar(
+            backgroundColor: AppColors.black,
+            radius: 6,
+          ),
+          AppGaps.appGapH32,
+        ],
+      ),
     );
   }
 }

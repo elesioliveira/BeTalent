@@ -77,10 +77,9 @@ class _EmployeesScreenState extends State<EmployeesScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          AppGaps.appGapV16,
                           //cabeçario
                           const AppHeader(),
-                          AppGaps.appGapV04,
+
                           const Divider(
                             thickness: 1,
                             height: 1,
