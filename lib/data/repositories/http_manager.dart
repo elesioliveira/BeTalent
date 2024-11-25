@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import '../shared/http_exception_model.dart';
-import '../shared/http_response.dart';
+import '../../core/shared/http_exception_model.dart';
+import '../../core/shared/http_response.dart';
 
 class HttpMethods {
   static const String post = 'POST';

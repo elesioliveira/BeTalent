@@ -15,15 +15,16 @@ final EmplyoeeDatasourceImpl employeeDatasource = EmplyoeeDatasourceImpl();
 void fetchEmployees() async {
   isLoadingEmployee.value = true;
   listEmployees.value.clear();
+
   final result = await employeeDatasource.getEmployeesData();
-  result.fold(
-    (failure) {
-      print('Erro ao buscar dados: ${failure.runtimeType}');
-    },
-    (employees) {
-      listEmployees.value = [...listEmployees.value, ...employees];
-    },
-  );
+
+  if (result.sucess != null) {
+    // Atualize a lista com os funcionários retornados
+    listEmployees.value = [...listEmployees.value, ...result.sucess!];
+  } else {
+    // Lidar com o erro
+    print('Erro ao buscar dados: ${result.error}');
+  }
 
   isLoadingEmployee.value = false;
 }
@@ -39,6 +40,5 @@ void filterEmployess(String data) {
           lowerCaseJob.contains(dataLowerCase) ||
           element.phone.contains(dataLowerCase);
     }).toList();
-    print(listEmployeesFiltered.value);
   });
 }
